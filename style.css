@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto';
+    font-size: small;
+    text-transform: uppercase;
+}
+
+body {
+    display: flex;
+}
+
+body .column1 {
+    display: flex;
+    height: 100vh;
+    width: 37vw;
+}
+
+.column1 img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+body .column1 .mobile {
+    display: none;
+}
+
+.column2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.column2 #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25vw;
+    height: 55vh;
+}
+
+.column2 #form input {
+    border: 1px solid #866D91;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.column2 #form input::placeholder {
+    padding: 1vw;
+}
+
+.column2 #form .row {
+    margin: 3vh 0;
+}
+
+.column2 #form .dateandcodecard {
+    display: flex;
+    width: 100%;
+}
+
+.column2 #form .dateandcodecard .codecard {
+    margin-left: 2vw;
+}
+
+.column2 #form .button input {
+    background-color: #220930;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.column2 #form .dateandcodecard #year {
+    width: 5.3vw;
+}
+
+.column2 #form .dateandcodecard #month {
+    width: 5.3vw;
+}
+
+.column2 #confirmation {
+    display: none;
+    flex-direction: column;
+    width: 25vw;
+    height: 45vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column2 #confirmation .img {
+    width: 7vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.column2 #confirmation h1 {
+    color: #220930;
+    font-size: 25px;
+}
+
+.column2 #confirmation h3 {
+    color: #aaa;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.column2 #confirmation input {
+    padding: 10px;
+    width: 100%;
+    background-color: #220930;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.card {
+    display: flex;
+    object-fit: contain;
+    height: 30vh;
+    position: absolute;
+    border-radius: 50px;
+    -webkit-box-shadow: 4px 9px 39px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 9px 39px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 9px 39px -6px rgba(0, 0, 0, 0.75);
+}
+
+#cardfront {
+    left: 10vw;
+    top: 15vh;
+}
+
+.txtcard {
+    position: absolute;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#cardfront #name {
+    left: 25px;
+    bottom: 20px;
+}
+
+#cardfront #month_card {
+    left: 260px;
+    bottom: 20px;
+}
+
+#cardfront #bar {
+    left: 278px;
+    bottom: 20px;
+}
+
+#cardfront #year_card {
+    left: 285px;
+    bottom: 20px;
+}
+
+#cardfront #number {
+    left: 20px;
+    bottom: 60px;
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+#cardfront #logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+
+}
+
+#cardback {
+    left: 15vw;
+    top: 50vh;
+}
+
+#cardback #code_card {
+    bottom: 80px;
+    right: 35px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    body .column1 .mobile {
+        display: flex;
+    }
+
+    body .column1 .desktop {
+        display: none;
+    }
+
+    body .column1 {
+        width: 100vw;
+        height: 25vh;
+        object-fit: cover;
+    }
+
+    body .column1 img {
+        width: 100vw;
+    }
+
+    body .card {
+        height: 19vh;
+    }
+
+    body #cardfront {
+        z-index: 1;
+    }
+
+    body #cardfront #logo{
+        display: flex;
+        height: 4vh;
+        top: 2vh;
+    }
+
+    body #cardfront #number {
+        font-size: 20px;
+    }
+
+    body #cardfront #name {
+        font-size: 13px;
+    }
+
+    body #cardfront #month_card {
+        left: 230px;
+        font-size: 13px;
+    }
+
+    body #cardfront #bar{
+        left: 247px;
+        font-size: 13px;
+    }
+
+    body #cardfront #year_card{
+        left: 255px;
+        font-size: 13px;
+    }
+
+    body #cardback {
+        top: 4vh;
+        left: 23vw;
+        
+    }
+
+    body #cardback span{
+        top: 8.2vh;
+        left: 53vw;
+    }
+
+    body .column2 {
+        display: flex;
+    }
+
+    body .column2 #form {
+        margin-top: 13vh;
+        width: 85vw;
+        height: 50vh;
+    }
+
+    body .column2 #form p {
+        font-size: 20px;
+    }
+
+    body .column2 #form input {
+        padding: 15px 0;
+    }
+
+    body .column2 #form .button input {
+        padding: 22px 0;
+        margin-top: 5vh;
+        font-size: 18px;
+    }
+
+    body .column2 #form .dateandcodecard .date {
+        width: 80%;
+    }
+
+    body .column2 #form .dateandcodecard #year,
+    #month {
+        width: 20vw;
+    }
+
+    body .column2 #form .dateandcodecard #month {
+        width: 20vw;
+    }
+
+    body .column2 #form input::placeholder {
+        padding: 3vw;
+    }
+
+    .column2 #confirmation {
+        width: 75vw;
+        margin-top: 13vh;
+    }
+
+    .column2 #confirmation img {
+        height: 13vh;
+    }
+
+    .column2 #confirmation h1 {
+        font-size: 35px;
+    }
+
+    .column2 #confirmation input {
+        padding: 20px;
+    }
+
+}

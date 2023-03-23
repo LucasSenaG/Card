@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Cartão</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="column1">
+        <img src="asset/img/bg-main-desktop.png" class="desktop">
+        <img src="asset/img/bg-main-mobile.png" class="mobile">
+    </div>
+    <div class="column2">
+        <div id="form">
+            <div class="row">
+                <p>cardholder name</p>
+                <input type="text" name="client_name" id="client_name" placeholder="full name"  onchange="settext(this.value, '#name')">
+            </div>
+            <div class="row">
+                <p>card number</p>
+                <input type="text" name="card_number" id="card_number" placeholder="0000 0000 0000 0000" onchange="settext(this.value, '#number')">
+            </div>
+            <div class="dateandcodecard">
+                <div class="date">
+                    <p>exp. date (mm/yy)</p>
+                    <input type="text" name="month" id="month" placeholder="MM" onchange="settext(this.value, '#month_card')">
+                    <input type="text" name="year" id="year" placeholder="YY" onchange="settext(this.value, '#year_card')">
+                </div>
+                <div class="codecard">
+                    <p>cvc</p>
+                    <input type="text" name="code" id="code" placeholder="000" onchange="settext(this.value, '#code_card')">
+                </div>
+            </div>
+            <div class="button" onclick="showConfirmation()">
+                <input type="submit" value="Confirm">
+            </div>
+        </div>
+        <div id="confirmation">
+            <div class="img">
+                <img src="asset/img/icon-complete.svg" alt="Icon Complete">
+            </div>
+            <h1>THANK YOU!</h1>
+            <h3>We've added your card details</h3>
+            <input type="button" value="CONTINUE" onclick="showForm()">
+        </div>
+    </div>
+    <div class="card" id="cardfront">
+        <img src="asset/img/bg-card-front.png" alt="Card Front">
+        <img src="asset/img/card-logo.svg" alt="Logo" id="logo">
+        <span id="number" class="txtcard">0000 0000 0000 0000</span>
+        <span id="name" class="txtcard">Full Name</span>
+        <span id="month_card" class="txtcard">00</span>
+        <span class="txtcard" id="bar">/</span>
+        <span id="year_card" class="txtcard">00</span>
+    </div>
+    <div class="card" id="cardback">
+        <img src="asset/img/bg-card-back.png" alt="Card Back">
+        <span id="code_card" class="txtcard">000</span>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+</body>
+
+</html>
+
